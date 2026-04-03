@@ -1,5 +1,5 @@
 ﻿/* jellyfin-css build output */
-/* generated: 2026-04-03 17:28:35 */
+/* generated: 2026-04-03 17:59:04 */
 /* source entrypoint: src/scss/index.scss */
 
 /* ===== _tokens.scss ===== */
@@ -245,6 +245,25 @@ a[data-role='button']:hover,
 .itemProgressBarForeground-recording {
     background: linear-gradient(90deg, var(--ts-color-accent) 0%, var(--ts-color-accent-strong) 100%) !important;
     border-radius: 999px !important;
+}
+
+/* Temporary debug override to verify that the published CSS is the file Jellyfin is loading. */
+html,
+body,
+.backgroundContainer,
+.dialog,
+.nowPlayingContextMenu,
+.nowPlayingPlaylist,
+.layout-desktop,
+.layout-mobile {
+    background: #ffffff !important;
+    background-image: none !important;
+    background-color: #ffffff !important;
+}
+
+body::before,
+.backgroundContainer::before {
+    display: none !important;
 }
 
 /* ===== _shell.scss ===== */

@@ -208,3 +208,22 @@ a[data-role='button']:hover,
     background: linear-gradient(90deg, var(--ts-color-accent) 0%, var(--ts-color-accent-strong) 100%) !important;
     border-radius: 999px !important;
 }
+
+/* Temporary debug override to verify that the published CSS is the file Jellyfin is loading. */
+html,
+body,
+.backgroundContainer,
+.dialog,
+.nowPlayingContextMenu,
+.nowPlayingPlaylist,
+.layout-desktop,
+.layout-mobile {
+    background: #ffffff !important;
+    background-image: none !important;
+    background-color: #ffffff !important;
+}
+
+body::before,
+.backgroundContainer::before {
+    display: none !important;
+}
