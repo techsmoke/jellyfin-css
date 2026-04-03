@@ -1,10 +1,13 @@
 .detailPageWrapperContainer {
     border-collapse: separate !important;
+    position: relative;
+    isolation: isolate;
 }
 
 .itemBackdrop {
-    height: 58vh !important;
+    height: 52vh !important;
     min-height: 24rem;
+    max-height: 38rem;
     background-position: center top !important;
     background-size: cover !important;
 }
@@ -17,20 +20,32 @@
     pointer-events: none;
 }
 
-.layout-desktop .detailPageWrapperContainer::before,
-.layout-tv .detailPageWrapperContainer::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: min(60vw, 58rem);
-    background: var(--ts-detail-overlay);
-    pointer-events: none;
-    z-index: 0;
+.detailPageWrapperContainer::before {
+    display: none !important;
+}
+
+.layout-desktop .detailPagePrimaryContainer,
+.layout-tv .detailPagePrimaryContainer {
+    display: grid !important;
+    grid-template-columns: minmax(15rem, 18vw) minmax(0, 1fr);
+    gap: clamp(1.35rem, 2.4vw, 2.8rem);
+    align-items: end;
+    padding: 0 clamp(2rem, 3vw, 3.25rem) 2rem !important;
+    margin-top: -9rem;
+    position: relative;
+    z-index: 2;
+}
+
+.layout-desktop .detailImageContainer,
+.layout-tv .detailImageContainer {
+    width: min(18rem, 100%);
+    margin: 0 !important;
+    align-self: end;
 }
 
 .layout-desktop .detailImageContainer .card,
 .layout-tv .detailImageContainer .card {
-    top: 12% !important;
+    top: auto !important;
 }
 
 .detailImageContainer .card,
@@ -44,15 +59,17 @@
 .detailPagePrimaryContent {
     position: relative;
     z-index: 1;
-    max-width: min(64rem, 72vw);
-    padding-top: 1rem !important;
+    max-width: none !important;
+    min-width: 0;
+    padding-top: 0 !important;
 }
 
 .itemName.infoText.parentNameLast {
-    font-size: clamp(2.4rem, 5vw, 4.8rem) !important;
+    font-size: clamp(2rem, 4.2vw, 4rem) !important;
     font-weight: 900 !important;
     line-height: 0.95 !important;
-    margin-bottom: 0.8rem !important;
+    margin: 0 0 1rem !important;
+    max-width: 12ch;
     text-wrap: balance;
 }
 
@@ -61,6 +78,7 @@
     color: var(--ts-color-text-muted) !important;
     font-weight: 600 !important;
     gap: 0.45rem;
+    flex-wrap: wrap;
 }
 
 .detailRibbon {
@@ -68,10 +86,15 @@
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: var(--ts-radius-lg) !important;
     backdrop-filter: blur(16px);
+    width: max-content;
+    max-width: 100%;
+    padding: 0.7rem 0.9rem !important;
 }
 
 .mainDetailButtons {
-    margin: 1.6rem 0 1.2rem !important;
+    margin: 0.6rem 0 1.2rem !important;
+    display: flex !important;
+    flex-wrap: wrap;
     gap: 0.75rem;
 }
 
@@ -104,7 +127,7 @@
 .itemOverview,
 .detail-clamp-text {
     color: var(--ts-color-text-muted) !important;
-    max-width: 58rem;
+    max-width: 46rem;
     line-height: 1.65 !important;
     font-size: 1rem !important;
 }
@@ -121,6 +144,19 @@
 
 .itemDetailPage .sectionTitle {
     font-size: 1.25rem !important;
+}
+
+.detailLogo {
+    display: block;
+    max-width: min(30rem, 46vw);
+    max-height: 8.5rem;
+    margin: 0 0 1.15rem !important;
+    object-fit: contain;
+}
+
+.detailPagePrimaryContent:has(.detailLogo:not(.hide)) .itemName.infoText.parentNameLast,
+.itemDetailPage:has(.detailLogo:not(.hide)) .itemName.infoText.parentNameLast {
+    display: none !important;
 }
 
 .detailSection,

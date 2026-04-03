@@ -1,27 +1,32 @@
 .skinHeader {
     position: fixed !important;
     inset: 0 0 auto 0 !important;
-    background: var(--ts-shell-gradient) !important;
+    background: linear-gradient(180deg, rgba(5, 5, 7, 0.9) 0%, rgba(5, 5, 7, 0.72) 55%, rgba(5, 5, 7, 0) 100%) !important;
     border: none !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     box-shadow: none !important;
     transition: background-color 0.25s ease, backdrop-filter 0.25s ease !important;
 }
 
 .skinHeader-withBackground,
 .skinHeader.semiTransparent {
-    background: var(--ts-shell-gradient) !important;
-    backdrop-filter: blur(20px);
+    background: linear-gradient(180deg, rgba(5, 5, 7, 0.94) 0%, rgba(5, 5, 7, 0.74) 58%, rgba(5, 5, 7, 0) 100%) !important;
+    backdrop-filter: blur(12px);
 }
 
 .headerTop {
-    padding-top: max(0.45rem, env(safe-area-inset-top)) !important;
-    padding-bottom: 0.2rem !important;
+    padding-top: max(0.65rem, env(safe-area-inset-top)) !important;
+    padding-bottom: 0.35rem !important;
 }
 
 .headerLeft,
 .headerRight {
     color: var(--ts-color-text) !important;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
 }
 
 .headerButton,
@@ -52,20 +57,41 @@
 .pageTitleWithLogo,
 .pageTitleWithDefaultLogo {
     filter: brightness(1.05);
+    transform: scale(0.72);
+    transform-origin: left center;
+    margin-right: 0.8rem;
+}
+
+.homePage .pageTitleWithLogo,
+.homePage .pageTitleWithDefaultLogo {
+    transform: scale(0.64);
 }
 
 .sectionTabs,
 .headerTabs {
-    width: 100%;
+    width: auto !important;
+    max-width: 100%;
+    background: transparent !important;
+}
+
+.headerTabs,
+.sectionTabs,
+.emby-tabs-slider {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
 }
 
 .emby-tab-button {
-    color: var(--ts-color-text-dim) !important;
-    padding: 1rem 1.15rem !important;
-    margin-right: 0.4rem !important;
+    color: rgba(255, 255, 255, 0.74) !important;
+    padding: 0.82rem 0.1rem !important;
+    margin-right: 1.25rem !important;
     border-bottom: 2px solid transparent !important;
+    border-radius: 0 !important;
+    background: transparent !important;
     font-weight: 700 !important;
     letter-spacing: 0.01em;
+    min-width: 0 !important;
 }
 
 .emby-tab-button:hover,
@@ -76,6 +102,11 @@
 .emby-tab-button-active {
     color: #fff !important;
     border-bottom-color: var(--ts-color-accent) !important;
+}
+
+.homePage .emby-tab-button,
+.libraryPage .emby-tab-button {
+    font-size: 0.98rem !important;
 }
 
 .mainDrawer,

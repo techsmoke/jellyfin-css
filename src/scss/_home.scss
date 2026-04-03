@@ -5,17 +5,19 @@
 
 .homePage .sectionTitleContainer,
 .libraryPage .sectionTitleContainer {
-    margin-top: 2rem !important;
+    margin-top: 1.25rem !important;
     margin-bottom: 0.85rem !important;
 }
 
 .sectionTitleContainer > .sectionTitle {
-    font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important;
+    font-size: clamp(1.3rem, 1.8vw, 1.75rem) !important;
     font-weight: 800 !important;
 }
 
 .sectionTitleTextButton {
     color: #fff !important;
+    background: transparent !important;
+    padding-left: 0 !important;
 }
 
 .homePage .emby-scroller,
@@ -68,6 +70,38 @@
     box-shadow: var(--ts-shadow-md) !important;
 }
 
+.homePage .verticalSection:first-of-type {
+    margin-bottom: 1.8rem !important;
+}
+
+.homePage .verticalSection:first-of-type .itemsContainer {
+    gap: 0.9rem;
+}
+
+.homePage .verticalSection:first-of-type .card {
+    width: clamp(10.5rem, 16vw, 14rem) !important;
+}
+
+.homePage .verticalSection:first-of-type .cardScalable,
+.homePage .verticalSection:first-of-type .cardBox.visualCardBox {
+    border-radius: 1.1rem !important;
+}
+
+.homePage .verticalSection:first-of-type .cardImageContainer::after,
+.homePage .verticalSection:first-of-type .cardOverlayContainer::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.28) 58%, rgba(0, 0, 0, 0) 100%);
+}
+
+.homePage .verticalSection:first-of-type .cardText {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+}
+
+.homePage .verticalSection:first-of-type .cardText-secondary {
+    display: none !important;
+}
+
 .cardImageContainer::after,
 .blurhash-canvas::after,
 .cardOverlayContainer::after {
@@ -112,4 +146,9 @@
 
 .verticalSection {
     margin-bottom: 1.35rem !important;
+}
+
+.homePage .itemsContainer.vertical-wrap,
+.libraryPage .itemsContainer.vertical-wrap {
+    row-gap: 0.25rem;
 }

@@ -1,5 +1,5 @@
 ﻿/* jellyfin-css build output */
-/* generated: 2026-04-03 16:49:11 */
+/* generated: 2026-04-03 17:28:35 */
 /* source entrypoint: src/scss/index.scss */
 
 /* ===== _tokens.scss ===== */
@@ -251,27 +251,32 @@ a[data-role='button']:hover,
 .skinHeader {
     position: fixed !important;
     inset: 0 0 auto 0 !important;
-    background: var(--ts-shell-gradient) !important;
+    background: linear-gradient(180deg, rgba(5, 5, 7, 0.9) 0%, rgba(5, 5, 7, 0.72) 55%, rgba(5, 5, 7, 0) 100%) !important;
     border: none !important;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     box-shadow: none !important;
     transition: background-color 0.25s ease, backdrop-filter 0.25s ease !important;
 }
 
 .skinHeader-withBackground,
 .skinHeader.semiTransparent {
-    background: var(--ts-shell-gradient) !important;
-    backdrop-filter: blur(20px);
+    background: linear-gradient(180deg, rgba(5, 5, 7, 0.94) 0%, rgba(5, 5, 7, 0.74) 58%, rgba(5, 5, 7, 0) 100%) !important;
+    backdrop-filter: blur(12px);
 }
 
 .headerTop {
-    padding-top: max(0.45rem, env(safe-area-inset-top)) !important;
-    padding-bottom: 0.2rem !important;
+    padding-top: max(0.65rem, env(safe-area-inset-top)) !important;
+    padding-bottom: 0.35rem !important;
 }
 
 .headerLeft,
 .headerRight {
     color: var(--ts-color-text) !important;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
 }
 
 .headerButton,
@@ -302,20 +307,41 @@ a[data-role='button']:hover,
 .pageTitleWithLogo,
 .pageTitleWithDefaultLogo {
     filter: brightness(1.05);
+    transform: scale(0.72);
+    transform-origin: left center;
+    margin-right: 0.8rem;
+}
+
+.homePage .pageTitleWithLogo,
+.homePage .pageTitleWithDefaultLogo {
+    transform: scale(0.64);
 }
 
 .sectionTabs,
 .headerTabs {
-    width: 100%;
+    width: auto !important;
+    max-width: 100%;
+    background: transparent !important;
+}
+
+.headerTabs,
+.sectionTabs,
+.emby-tabs-slider {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
 }
 
 .emby-tab-button {
-    color: var(--ts-color-text-dim) !important;
-    padding: 1rem 1.15rem !important;
-    margin-right: 0.4rem !important;
+    color: rgba(255, 255, 255, 0.74) !important;
+    padding: 0.82rem 0.1rem !important;
+    margin-right: 1.25rem !important;
     border-bottom: 2px solid transparent !important;
+    border-radius: 0 !important;
+    background: transparent !important;
     font-weight: 700 !important;
     letter-spacing: 0.01em;
+    min-width: 0 !important;
 }
 
 .emby-tab-button:hover,
@@ -326,6 +352,11 @@ a[data-role='button']:hover,
 .emby-tab-button-active {
     color: #fff !important;
     border-bottom-color: var(--ts-color-accent) !important;
+}
+
+.homePage .emby-tab-button,
+.libraryPage .emby-tab-button {
+    font-size: 0.98rem !important;
 }
 
 .mainDrawer,
@@ -375,17 +406,19 @@ a[data-role='button']:hover,
 
 .homePage .sectionTitleContainer,
 .libraryPage .sectionTitleContainer {
-    margin-top: 2rem !important;
+    margin-top: 1.25rem !important;
     margin-bottom: 0.85rem !important;
 }
 
 .sectionTitleContainer > .sectionTitle {
-    font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important;
+    font-size: clamp(1.3rem, 1.8vw, 1.75rem) !important;
     font-weight: 800 !important;
 }
 
 .sectionTitleTextButton {
     color: #fff !important;
+    background: transparent !important;
+    padding-left: 0 !important;
 }
 
 .homePage .emby-scroller,
@@ -438,6 +471,38 @@ a[data-role='button']:hover,
     box-shadow: var(--ts-shadow-md) !important;
 }
 
+.homePage .verticalSection:first-of-type {
+    margin-bottom: 1.8rem !important;
+}
+
+.homePage .verticalSection:first-of-type .itemsContainer {
+    gap: 0.9rem;
+}
+
+.homePage .verticalSection:first-of-type .card {
+    width: clamp(10.5rem, 16vw, 14rem) !important;
+}
+
+.homePage .verticalSection:first-of-type .cardScalable,
+.homePage .verticalSection:first-of-type .cardBox.visualCardBox {
+    border-radius: 1.1rem !important;
+}
+
+.homePage .verticalSection:first-of-type .cardImageContainer::after,
+.homePage .verticalSection:first-of-type .cardOverlayContainer::after {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.28) 58%, rgba(0, 0, 0, 0) 100%);
+}
+
+.homePage .verticalSection:first-of-type .cardText {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+}
+
+.homePage .verticalSection:first-of-type .cardText-secondary {
+    display: none !important;
+}
+
 .cardImageContainer::after,
 .blurhash-canvas::after,
 .cardOverlayContainer::after {
@@ -484,14 +549,22 @@ a[data-role='button']:hover,
     margin-bottom: 1.35rem !important;
 }
 
+.homePage .itemsContainer.vertical-wrap,
+.libraryPage .itemsContainer.vertical-wrap {
+    row-gap: 0.25rem;
+}
+
 /* ===== _details.scss ===== */
 .detailPageWrapperContainer {
     border-collapse: separate !important;
+    position: relative;
+    isolation: isolate;
 }
 
 .itemBackdrop {
-    height: 58vh !important;
+    height: 52vh !important;
     min-height: 24rem;
+    max-height: 38rem;
     background-position: center top !important;
     background-size: cover !important;
 }
@@ -504,20 +577,32 @@ a[data-role='button']:hover,
     pointer-events: none;
 }
 
-.layout-desktop .detailPageWrapperContainer::before,
-.layout-tv .detailPageWrapperContainer::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: min(60vw, 58rem);
-    background: var(--ts-detail-overlay);
-    pointer-events: none;
-    z-index: 0;
+.detailPageWrapperContainer::before {
+    display: none !important;
+}
+
+.layout-desktop .detailPagePrimaryContainer,
+.layout-tv .detailPagePrimaryContainer {
+    display: grid !important;
+    grid-template-columns: minmax(15rem, 18vw) minmax(0, 1fr);
+    gap: clamp(1.35rem, 2.4vw, 2.8rem);
+    align-items: end;
+    padding: 0 clamp(2rem, 3vw, 3.25rem) 2rem !important;
+    margin-top: -9rem;
+    position: relative;
+    z-index: 2;
+}
+
+.layout-desktop .detailImageContainer,
+.layout-tv .detailImageContainer {
+    width: min(18rem, 100%);
+    margin: 0 !important;
+    align-self: end;
 }
 
 .layout-desktop .detailImageContainer .card,
 .layout-tv .detailImageContainer .card {
-    top: 12% !important;
+    top: auto !important;
 }
 
 .detailImageContainer .card,
@@ -531,15 +616,17 @@ a[data-role='button']:hover,
 .detailPagePrimaryContent {
     position: relative;
     z-index: 1;
-    max-width: min(64rem, 72vw);
-    padding-top: 1rem !important;
+    max-width: none !important;
+    min-width: 0;
+    padding-top: 0 !important;
 }
 
 .itemName.infoText.parentNameLast {
-    font-size: clamp(2.4rem, 5vw, 4.8rem) !important;
+    font-size: clamp(2rem, 4.2vw, 4rem) !important;
     font-weight: 900 !important;
     line-height: 0.95 !important;
-    margin-bottom: 0.8rem !important;
+    margin: 0 0 1rem !important;
+    max-width: 12ch;
     text-wrap: balance;
 }
 
@@ -548,6 +635,7 @@ a[data-role='button']:hover,
     color: var(--ts-color-text-muted) !important;
     font-weight: 600 !important;
     gap: 0.45rem;
+    flex-wrap: wrap;
 }
 
 .detailRibbon {
@@ -555,10 +643,15 @@ a[data-role='button']:hover,
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: var(--ts-radius-lg) !important;
     backdrop-filter: blur(16px);
+    width: max-content;
+    max-width: 100%;
+    padding: 0.7rem 0.9rem !important;
 }
 
 .mainDetailButtons {
-    margin: 1.6rem 0 1.2rem !important;
+    margin: 0.6rem 0 1.2rem !important;
+    display: flex !important;
+    flex-wrap: wrap;
     gap: 0.75rem;
 }
 
@@ -591,7 +684,7 @@ a[data-role='button']:hover,
 .itemOverview,
 .detail-clamp-text {
     color: var(--ts-color-text-muted) !important;
-    max-width: 58rem;
+    max-width: 46rem;
     line-height: 1.65 !important;
     font-size: 1rem !important;
 }
@@ -608,6 +701,19 @@ a[data-role='button']:hover,
 
 .itemDetailPage .sectionTitle {
     font-size: 1.25rem !important;
+}
+
+.detailLogo {
+    display: block;
+    max-width: min(30rem, 46vw);
+    max-height: 8.5rem;
+    margin: 0 0 1.15rem !important;
+    object-fit: contain;
+}
+
+.detailPagePrimaryContent:has(.detailLogo:not(.hide)) .itemName.infoText.parentNameLast,
+.itemDetailPage:has(.detailLogo:not(.hide)) .itemName.infoText.parentNameLast {
+    display: none !important;
 }
 
 .detailSection,
@@ -770,6 +876,10 @@ a[data-role='button']:hover,
     .detailPagePrimaryContent {
         max-width: 100%;
     }
+
+    .detailLogo {
+        max-width: min(22rem, 58vw);
+    }
 }
 
 @media all and (max-width: 62.5em) {
@@ -787,9 +897,20 @@ a[data-role='button']:hover,
         background: linear-gradient(180deg, rgba(8, 8, 10, 0.12) 0%, rgba(8, 8, 10, 0.74) 55%, rgba(8, 8, 10, 0.95) 100%);
     }
 
+    .layout-mobile .detailPagePrimaryContainer {
+        display: block !important;
+        padding: 0 1rem 1.5rem !important;
+        margin-top: -4.5rem;
+    }
+
     .layout-mobile .itemBackdrop {
         height: 42vh !important;
         min-height: 18rem;
+    }
+
+    .layout-mobile .detailImageContainer {
+        width: min(44vw, 14rem);
+        margin: 0 auto 1rem !important;
     }
 
     .layout-mobile .detailImageContainer .card {
@@ -798,6 +919,7 @@ a[data-role='button']:hover,
 
     .layout-mobile .detailPagePrimaryContent {
         padding-top: 0.25rem !important;
+        text-align: left;
     }
 
     .layout-mobile .mainDetailButtons {
@@ -814,6 +936,11 @@ a[data-role='button']:hover,
         margin-left: 1rem;
         margin-right: 1rem;
         padding: 1.4rem !important;
+    }
+
+    .layout-mobile .detailLogo {
+        max-width: min(18rem, 72vw);
+        margin: 0 auto 1rem !important;
     }
 }
 
