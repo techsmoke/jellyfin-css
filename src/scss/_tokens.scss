@@ -1,0 +1,31 @@
+:root {
+    --ts-font-sans: "Segoe UI", "Helvetica Neue", "Arial Nova", sans-serif;
+    --ts-color-bg: #0a0b0f;
+    --ts-color-bg-elevated: #11131a;
+    --ts-color-bg-panel: rgba(17, 19, 26, 0.82);
+    --ts-color-bg-panel-strong: rgba(12, 13, 18, 0.94);
+    --ts-color-bg-soft: rgba(255, 255, 255, 0.06);
+    --ts-color-border: rgba(255, 255, 255, 0.12);
+    --ts-color-border-strong: rgba(255, 255, 255, 0.22);
+    --ts-color-text: #f5f7fa;
+    --ts-color-text-muted: rgba(245, 247, 250, 0.72);
+    --ts-color-text-dim: rgba(245, 247, 250, 0.5);
+    --ts-color-accent: #e50914;
+    --ts-color-accent-soft: rgba(229, 9, 20, 0.2);
+    --ts-color-accent-strong: #ff3944;
+    --ts-color-success: #32d17c;
+    --ts-color-warning: #ffbf47;
+    --ts-shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.22);
+    --ts-shadow-md: 0 18px 42px rgba(0, 0, 0, 0.35);
+    --ts-shadow-lg: 0 28px 80px rgba(0, 0, 0, 0.55);
+    --ts-radius-xs: 0.35rem;
+    --ts-radius-sm: 0.65rem;
+    --ts-radius-md: 1rem;
+    --ts-radius-lg: 1.35rem;
+    --ts-radius-xl: 1.8rem;
+    --ts-shell-gradient: linear-gradient(180deg, rgba(8, 8, 12, 0.96) 0%, rgba(8, 8, 12, 0.68) 52%, rgba(8, 8, 12, 0) 100%);
+    --ts-page-gradient: radial-gradient(circle at top, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 30%), linear-gradient(180deg, #13151b 0%, #0b0c10 45%, #06070a 100%);
+    --ts-card-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+    --ts-detail-overlay: linear-gradient(90deg, rgba(7, 8, 10, 0.96) 0%, rgba(7, 8, 10, 0.86) 38%, rgba(7, 8, 10, 0.38) 78%, rgba(7, 8, 10, 0) 100%);
+    --ts-hero-overlay: linear-gradient(180deg, rgba(8, 8, 12, 0.18) 0%, rgba(8, 8, 12, 0.55) 55%, rgba(8, 8, 12, 0.94) 100%);
+}

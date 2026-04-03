@@ -1,0 +1,43 @@
+.skinHeader-withBackground.osdHeader {
+    background: linear-gradient(180deg, rgba(8, 8, 10, 0.92) 0%, rgba(8, 8, 10, 0) 100%) !important;
+    color: #fff !important;
+    backdrop-filter: blur(12px);
+}
+
+.videoOsdBottom {
+    background: linear-gradient(0deg, rgba(8, 8, 10, 0.96) 0%, rgba(8, 8, 10, 0.52) 44%, rgba(8, 8, 10, 0) 100%) !important;
+    color: #fff !important;
+}
+
+.osdControls {
+    max-width: min(76rem, 100vw);
+}
+
+.videoOsdBottom .buttons .paper-icon-button-light,
+.osdControls .paper-icon-button-light {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 999px !important;
+    color: #fff !important;
+}
+
+.videoOsdBottom .buttons .paper-icon-button-light:hover,
+.osdControls .paper-icon-button-light:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.mdl-slider-background-lower,
+.sliderMarker {
+    background: var(--ts-color-accent) !important;
+}
+
+.chapterThumbContainer {
+    border-radius: var(--ts-radius-md) !important;
+    overflow: hidden;
+    box-shadow: var(--ts-shadow-sm) !important;
+}
+
+.chapterThumbTextContainer {
+    background: rgba(8, 8, 10, 0.82) !important;
+    color: #fff !important;
+}

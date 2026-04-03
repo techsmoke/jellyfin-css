@@ -1,0 +1,210 @@
+html,
+body,
+.backgroundContainer,
+.dialog,
+.nowPlayingContextMenu,
+.nowPlayingPlaylist {
+    background: var(--ts-page-gradient) !important;
+    background-color: var(--ts-color-bg) !important;
+    color: var(--ts-color-text) !important;
+    font-family: var(--ts-font-sans);
+}
+
+html {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+body::before,
+.backgroundContainer::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 12% 20%, rgba(229, 9, 20, 0.13) 0%, rgba(229, 9, 20, 0) 22%),
+        radial-gradient(circle at 88% 8%, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 16%);
+    z-index: 0;
+}
+
+.pageContainer,
+.mainAnimatedPage,
+.libraryPage,
+.itemDetailPage,
+.dashboardDocument,
+#loginPage {
+    position: relative;
+    z-index: 1;
+}
+
+.layout-desktop .padded-left,
+.layout-desktop .padded-right {
+    padding-left: min(3.8vw, 3rem) !important;
+    padding-right: min(3.8vw, 3rem) !important;
+}
+
+a,
+.button-link,
+.textActionButton,
+.clearLink {
+    color: var(--ts-color-text) !important;
+}
+
+.button-link:hover,
+.textActionButton:hover,
+.clearLink:hover {
+    color: #ffffff !important;
+}
+
+.emby-button,
+.raised,
+a[data-role='button'],
+.fab {
+    border-radius: 999px !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+.button-submit,
+.emby-button.block.button-submit,
+.selectionCommandsPanel,
+.navMenuOption-selected,
+.countIndicator,
+.playedIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator {
+    background: linear-gradient(135deg, var(--ts-color-accent) 0%, var(--ts-color-accent-strong) 100%) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.button-submit:hover,
+.emby-button.block.button-submit:hover,
+.navMenuOption-selected:hover {
+    filter: brightness(1.06);
+}
+
+.button-alt,
+.button-cancel,
+.raised.cancel,
+.emby-button:not(.button-submit):not(.button-delete):not(.button-accent-flat) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: var(--ts-color-text) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.emby-button:hover,
+.raised:hover,
+a[data-role='button']:hover,
+.fab:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--ts-shadow-sm) !important;
+}
+
+.button-accent-flat,
+.buttonActive,
+.inputLabelFocused,
+.textareaLabelFocused,
+.selectLabelFocused {
+    color: var(--ts-color-accent-strong) !important;
+}
+
+.button-delete {
+    background: rgba(128, 11, 17, 0.82) !important;
+    color: #fff !important;
+    border-color: rgba(255, 120, 120, 0.25) !important;
+}
+
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor,
+.emby-select,
+.selectContainer .emby-select-withcolor {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--ts-color-border) !important;
+    border-radius: var(--ts-radius-sm) !important;
+    color: var(--ts-color-text) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select-withcolor:focus,
+.emby-select:focus {
+    border-color: rgba(255, 57, 68, 0.85) !important;
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.16) !important;
+}
+
+.checkboxOutline,
+.emby-checkbox:focus + span + .checkboxOutline {
+    border-color: var(--ts-color-border-strong) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+    background: linear-gradient(135deg, var(--ts-color-accent) 0%, var(--ts-color-accent-strong) 100%) !important;
+    border-color: transparent !important;
+}
+
+.paperList,
+.visualCardBox,
+.cardBox:not(.visualCardBox) .cardPadder,
+.formDialogHeader:not(.formDialogHeader-clear),
+.formDialogFooter:not(.formDialogFooter-clear),
+.collapseContent,
+.itemSelectionPanel,
+.selectionPanel {
+    background: var(--ts-color-bg-panel) !important;
+    border: 1px solid var(--ts-color-border) !important;
+    border-radius: var(--ts-radius-lg) !important;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--ts-shadow-md) !important;
+}
+
+.toast {
+    background: rgba(15, 16, 21, 0.96) !important;
+    color: var(--ts-color-text) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: var(--ts-radius-sm) !important;
+}
+
+.secondaryText,
+.cardText-secondary,
+.fieldDescription,
+.nowPlayingBarSecondaryText,
+.programSecondaryTitle,
+.inputLabelUnfocused,
+.textareaLabelUnfocused,
+.paperListLabel {
+    color: var(--ts-color-text-muted) !important;
+}
+
+.actionsheetDivider,
+.listItem-border {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.listItem:hover,
+.actionSheetMenuItem:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.listItem:focus,
+.emby-button.show-focus:focus,
+.card:focus .cardScalable,
+.card.show-focus .cardScalable {
+    outline: none !important;
+    box-shadow: 0 0 0 0.18rem rgba(255, 57, 68, 0.5), var(--ts-shadow-md) !important;
+}
+
+.itemProgressBar {
+    height: 0.28rem !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 999px !important;
+}
+
+.itemProgressBarForeground,
+.itemProgressBarForeground-recording {
+    background: linear-gradient(90deg, var(--ts-color-accent) 0%, var(--ts-color-accent-strong) 100%) !important;
+    border-radius: 999px !important;
+}

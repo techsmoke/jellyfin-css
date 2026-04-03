@@ -1,0 +1,118 @@
+.skinHeader {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    background: var(--ts-shell-gradient) !important;
+    border: none !important;
+    backdrop-filter: blur(20px);
+    box-shadow: none !important;
+    transition: background-color 0.25s ease, backdrop-filter 0.25s ease !important;
+}
+
+.skinHeader-withBackground,
+.skinHeader.semiTransparent {
+    background: var(--ts-shell-gradient) !important;
+    backdrop-filter: blur(20px);
+}
+
+.headerTop {
+    padding-top: max(0.45rem, env(safe-area-inset-top)) !important;
+    padding-bottom: 0.2rem !important;
+}
+
+.headerLeft,
+.headerRight {
+    color: var(--ts-color-text) !important;
+}
+
+.headerButton,
+.paper-icon-button-light {
+    color: var(--ts-color-text-muted) !important;
+    border-radius: 999px !important;
+}
+
+.headerButton:hover,
+.paper-icon-button-light:hover:not(:disabled) {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.pageTitle,
+.sectionTitle,
+.itemName,
+.nameContainer .itemName {
+    color: #fff !important;
+    letter-spacing: -0.02em;
+}
+
+.pageTitle {
+    font-size: clamp(1.55rem, 2.4vw, 2.25rem) !important;
+    font-weight: 800 !important;
+}
+
+.pageTitleWithLogo,
+.pageTitleWithDefaultLogo {
+    filter: brightness(1.05);
+}
+
+.sectionTabs,
+.headerTabs {
+    width: 100%;
+}
+
+.emby-tab-button {
+    color: var(--ts-color-text-dim) !important;
+    padding: 1rem 1.15rem !important;
+    margin-right: 0.4rem !important;
+    border-bottom: 2px solid transparent !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+}
+
+.emby-tab-button:hover,
+.emby-tab-button.show-focus:focus {
+    color: #fff !important;
+}
+
+.emby-tab-button-active {
+    color: #fff !important;
+    border-bottom-color: var(--ts-color-accent) !important;
+}
+
+.mainDrawer,
+.drawer-open {
+    background: linear-gradient(180deg, rgba(10, 11, 15, 0.98) 0%, rgba(16, 17, 22, 0.98) 100%) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: var(--ts-shadow-lg) !important;
+}
+
+.mainDrawer-scrollContainer {
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+.navMenuOption {
+    min-height: 3rem !important;
+    border-radius: 999px !important;
+    margin: 0.2rem 0.75rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    color: var(--ts-color-text-muted) !important;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease !important;
+}
+
+.navMenuOption:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #fff !important;
+    transform: translateX(2px);
+}
+
+.navMenuOption-selected {
+    box-shadow: 0 12px 30px rgba(229, 9, 20, 0.28) !important;
+}
+
+.appfooter,
+.playlistSectionButton {
+    background: rgba(10, 11, 15, 0.94) !important;
+    color: var(--ts-color-text-muted) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}

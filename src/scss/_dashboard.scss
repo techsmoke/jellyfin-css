@@ -1,0 +1,54 @@
+.dashboardDocument,
+.dashboardDocument .mainDrawer,
+.dashboardDocument .content-primary {
+    background-color: transparent !important;
+}
+
+.dashboardSection,
+.dashboardContent,
+.dashboardGeneralForm,
+.dashboardPage .paperList {
+    color: var(--ts-color-text) !important;
+}
+
+.dashboardSection .sectionTitle,
+.dashboardContent .sectionTitle {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+}
+
+.dashboardSidebar,
+.dashboardPage .mainDrawer {
+    background: rgba(11, 12, 17, 0.92) !important;
+}
+
+.dashboardPage .listItem,
+.dashboardPage .navMenuOption,
+.dashboardPage .paperList {
+    border-radius: var(--ts-radius-md) !important;
+}
+
+.dashboardPage table,
+.dashboardPage .table,
+.dashboardPage .itemsContainer.vertical-wrap {
+    color: var(--ts-color-text) !important;
+}
+
+.dashboardPage th,
+.dashboardPage td,
+.dashboardPage .listItemBodyText {
+    color: var(--ts-color-text-muted) !important;
+}
+
+.dashboardPage .itemAction,
+.dashboardPage .btnRefresh,
+.dashboardPage .btnOption,
+.dashboardPage .btnBrowse {
+    border-radius: 999px !important;
+}
+
+.dashboardPage .emby-input,
+.dashboardPage .emby-textarea,
+.dashboardPage .emby-select-withcolor {
+    min-height: 2.9rem;
+}

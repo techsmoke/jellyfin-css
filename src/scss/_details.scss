@@ -1,0 +1,130 @@
+.detailPageWrapperContainer {
+    border-collapse: separate !important;
+}
+
+.itemBackdrop {
+    height: 58vh !important;
+    min-height: 24rem;
+    background-position: center top !important;
+    background-size: cover !important;
+}
+
+.itemBackdrop::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--ts-hero-overlay);
+    pointer-events: none;
+}
+
+.layout-desktop .detailPageWrapperContainer::before,
+.layout-tv .detailPageWrapperContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: min(60vw, 58rem);
+    background: var(--ts-detail-overlay);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.layout-desktop .detailImageContainer .card,
+.layout-tv .detailImageContainer .card {
+    top: 12% !important;
+}
+
+.detailImageContainer .card,
+.itemDetailImage,
+.detailImageContainer .cardBox {
+    border-radius: var(--ts-radius-lg) !important;
+    overflow: hidden;
+    box-shadow: var(--ts-shadow-lg) !important;
+}
+
+.detailPagePrimaryContent {
+    position: relative;
+    z-index: 1;
+    max-width: min(64rem, 72vw);
+    padding-top: 1rem !important;
+}
+
+.itemName.infoText.parentNameLast {
+    font-size: clamp(2.4rem, 5vw, 4.8rem) !important;
+    font-weight: 900 !important;
+    line-height: 0.95 !important;
+    margin-bottom: 0.8rem !important;
+    text-wrap: balance;
+}
+
+.itemMiscInfo,
+.itemMiscInfo-primary {
+    color: var(--ts-color-text-muted) !important;
+    font-weight: 600 !important;
+    gap: 0.45rem;
+}
+
+.detailRibbon {
+    background: rgba(10, 11, 15, 0.86) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: var(--ts-radius-lg) !important;
+    backdrop-filter: blur(16px);
+}
+
+.mainDetailButtons {
+    margin: 1.6rem 0 1.2rem !important;
+    gap: 0.75rem;
+}
+
+.detailButton {
+    min-width: 6rem;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #fff !important;
+    padding: 0.95rem 1rem !important;
+}
+
+.detailButton:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    transform: translateY(-1px);
+}
+
+.detailButton-text {
+    font-size: 0.76rem !important;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ts-color-text-muted) !important;
+}
+
+.detailButton-icon {
+    color: #fff !important;
+}
+
+.overview,
+.itemOverview,
+.detail-clamp-text {
+    color: var(--ts-color-text-muted) !important;
+    max-width: 58rem;
+    line-height: 1.65 !important;
+    font-size: 1rem !important;
+}
+
+.mediaInfoIcons,
+.itemSpecialFeature {
+    color: var(--ts-color-text-muted) !important;
+}
+
+.personCard .cardScalable,
+.overflowPortraitCard .cardScalable {
+    border-radius: var(--ts-radius-md) !important;
+}
+
+.itemDetailPage .sectionTitle {
+    font-size: 1.25rem !important;
+}
+
+.detailSection,
+.detailVerticalSection {
+    position: relative;
+    z-index: 1;
+}

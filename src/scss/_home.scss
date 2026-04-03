@@ -1,0 +1,115 @@
+.homePage .padded-bottom-page,
+.libraryPage .padded-bottom-page {
+    padding-bottom: 4rem !important;
+}
+
+.homePage .sectionTitleContainer,
+.libraryPage .sectionTitleContainer {
+    margin-top: 2rem !important;
+    margin-bottom: 0.85rem !important;
+}
+
+.sectionTitleContainer > .sectionTitle {
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important;
+    font-weight: 800 !important;
+}
+
+.sectionTitleTextButton {
+    color: #fff !important;
+}
+
+.homePage .emby-scroller,
+.libraryPage .emby-scroller {
+    margin-right: 0 !important;
+    padding-bottom: 0.9rem;
+}
+
+.homePage .emby-scrollbuttons,
+.libraryPage .emby-scrollbuttons {
+    opacity: 0;
+    transition: opacity 0.18s ease;
+}
+
+.homePage .itemsContainer:hover + .emby-scrollbuttons,
+.homePage .emby-scrollbuttons:hover,
+.libraryPage .itemsContainer:hover + .emby-scrollbuttons,
+.libraryPage .emby-scrollbuttons:hover {
+    opacity: 1;
+}
+
+.emby-scrollbuttons-button {
+    background: rgba(10, 11, 15, 0.86) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 999px !important;
+    color: #fff !important;
+    box-shadow: var(--ts-shadow-sm) !important;
+}
+
+.cardBox,
+.cardScalable,
+.cardOverlayContainer,
+.cardImageContainer,
+.cardContent,
+.cardPadder {
+    border-radius: var(--ts-radius-md) !important;
+}
+
+.cardBox.visualCardBox,
+.cardScalable {
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.015) 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: var(--ts-shadow-sm) !important;
+}
+
+.card:hover .cardScalable,
+.card:hover .cardBox.visualCardBox {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--ts-shadow-md) !important;
+}
+
+.cardImageContainer::after,
+.blurhash-canvas::after,
+.cardOverlayContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.cardText {
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+
+.cardText-secondary {
+    color: var(--ts-color-text-dim) !important;
+}
+
+.innerCardFooter,
+.cardFooter {
+    background: rgba(8, 8, 10, 0.72) !important;
+    backdrop-filter: blur(10px);
+}
+
+.homePage .cardPadder,
+.libraryPage .cardPadder {
+    background: transparent !important;
+}
+
+.homePage .cardOverlayButton,
+.libraryPage .cardOverlayButton {
+    background: rgba(10, 11, 15, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 999px !important;
+}
+
+.itemsContainer > .card,
+.homePage .itemsContainer > .card {
+    margin-bottom: 1.2rem !important;
+}
+
+.verticalSection {
+    margin-bottom: 1.35rem !important;
+}
